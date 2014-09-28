@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Controls.js
+    http://controlsjs.com/
+
+    Copyright (c) 2014 Position s.r.o.  All rights reserved.
+
+    This version of Controls.js is licensed under the terms of GNU General Public License v3.
+    http://www.gnu.org/licenses/gpl-3.0.html
+
+    The commercial license can be purchased at Controls.js website.
+
+-->
+<archetype-descriptor name="Controls.js 4 Java Application">
+  <requiredProperties>
+    <requiredProperty key="example">
+        <defaultValue>true</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="ibrwsr">
+        <defaultValue>false</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="dlvkbrwsr">
+        <defaultValue>false</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="bck2brwsr">
+        <defaultValue>false</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="nbrwsr">
+        <defaultValue>false</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+  <fileSets>
+    <fileSet filtered="true" packaged="true">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false">
+      <directory>src/main/webapp/pages</directory>
+      <includes>
+        <include>**/*.xhtml</include>
+        <include>**/*.html</include>
+        <include>**/*.css</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true">
+      <directory>src/test/java</directory>
+      <includes>
+        <include>**/*Test.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*.ng</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false">
+      <directory>src/main/assembly</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="false" packaged="false">
+      <directory>src/main/icons</directory>
+      <includes>
+        <include>**/*.png</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false">
+      <directory></directory>
+      <includes>
+        <include>nbactions*.xml</include>
+        <include>AndroidManifest*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="false">
+      <directory>assembly</directory>
+      <includes>
+        <include>html.java.net-assembly.xml</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>

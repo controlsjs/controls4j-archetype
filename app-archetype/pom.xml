@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Controls.js
+    http://controlsjs.com/
+
+    Copyright (c) 2014 Position s.r.o.  All rights reserved.
+
+    The contents of this file are licensed under the terms of GNU General Public License v3.
+    http://www.gnu.org/licenses/gpl-3.0.html
+ 
+    The commercial license can be purchased at Controls.js website.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+      <groupId>com.controlsjs.controls4j</groupId>
+      <artifactId>archetypes-pom</artifactId>
+      <version>1.0</version>
+    </parent>
+    <groupId>com.controlsjs.controls4j</groupId>
+    <artifactId>app-archetype</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+  
+    <name>Controls.js 4 Java Application Maven Archetype</name>
+    <description>
+      Use Controls.js together with Java. Deploy to desktop,
+      Android, iOS, HTML5 browser.
+    </description>
+    <url>http://controlsjs.com</url>
+    <inceptionYear>2014</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>GPL-3.0</name>
+      <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+      <distribution>repo</distribution>
+    </license>
+    <license>
+      <name>Commercial Software</name>
+      <url>http://controlsjs.com/license.html</url>
+      <distribution>manual</distribution>
+    </license>
+  </licenses>
+  
+  <organization>
+      <name>Position s.r.o.</name>
+      <url>http://www.position.cz</url>
+  </organization>
+  
+  <developers>
+    <developer>
+      <name>controlsjs-team</name>
+      <email>dev@controlsjs.com</email>
+      <organization>Position s.r.o.</organization>
+      <organizationUrl>http://www.position.cz</organizationUrl>
+    </developer>
+  </developers>
+
+    <build>
+        <resources>
+            <resource>
+              <directory>src/main/resources</directory>
+              <filtering>true</filtering>
+              <includes>
+                  <include>**/pom.xml</include>
+              </includes>
+            </resource>
+            <resource>
+              <directory>src/main/resources</directory>
+              <filtering>false</filtering>
+              <excludes>
+                  <exclude>**/pom.xml</exclude>
+              </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <escapeString>\</escapeString>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <subpackages />
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
