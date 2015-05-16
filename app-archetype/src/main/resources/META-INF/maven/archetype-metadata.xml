@@ -15,30 +15,45 @@
 <archetype-descriptor name="Controls.js 4 Java Application">
   <requiredProperties>
     <requiredProperty key="example">
-        <defaultValue>true</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="ibrwsr">
-        <defaultValue>false</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="dlvkbrwsr">
-        <defaultValue>false</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="bck2brwsr">
-        <defaultValue>false</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="nbrwsr">
-        <defaultValue>false</defaultValue>
-    </requiredProperty>
+        <defaultValue>1</defaultValue>
+    </requiredProperty>      
+    <requiredProperty key="skin_wineight">
+        <defaultValue>1</defaultValue>
+    </requiredProperty>      
+    <requiredProperty key="skin_winxp">
+        <defaultValue>0</defaultValue>
+    </requiredProperty>      
+    <requiredProperty key="skin_wireframe">
+        <defaultValue>0</defaultValue>
+    </requiredProperty>      
+    <requiredProperty key="iospath">
+        <defaultValue>target/client-ios</defaultValue>
+    </requiredProperty>  
+    <requiredProperty key="androidpath">
+        <defaultValue>target/client-android</defaultValue>
+    </requiredProperty>  
+    <requiredProperty key="webpath">
+        <defaultValue>target/client-web</defaultValue>
+    </requiredProperty>  
+    <requiredProperty key="netbeanspath">
+        <defaultValue>target/client-netbeans</defaultValue>
+    </requiredProperty>  
   </requiredProperties>
   <fileSets>
+    <fileSet filtered="true">
+          <directory>client</directory>
+          <includes>
+              <include>pom.xml</include>
+          </includes>
+    </fileSet>
     <fileSet filtered="true" packaged="true">
-      <directory>src/main/java</directory>
+      <directory>client/src/main/java</directory>
       <includes>
         <include>**/*.java</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="false">
-      <directory>src/main/webapp/pages</directory>
+      <directory>client/src/main/webapp/pages</directory>
       <includes>
         <include>**/*.xhtml</include>
         <include>**/*.html</include>
@@ -46,41 +61,136 @@
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="true">
-      <directory>src/test/java</directory>
+      <directory>client/src/test/java</directory>
       <includes>
         <include>**/*Test.java</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="true">
-      <directory>src/main/resources</directory>
+      <directory>client/src/main/resources</directory>
       <includes>
         <include>**/*.ng</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="false">
-      <directory>src/main/assembly</directory>
+      <directory>client/src/main/assembly</directory>
       <includes>
         <include>**/*.xml</include>
       </includes>
     </fileSet>
     <fileSet filtered="false" packaged="false">
-      <directory>src/main/icons</directory>
+      <directory>client/src/main/icons</directory>
       <includes>
         <include>**/*.png</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="false">
-      <directory></directory>
+      <directory>client/</directory>
       <includes>
         <include>nbactions*.xml</include>
+        <include>nb-configuration*.xml</include>
         <include>AndroidManifest*.xml</include>
       </includes>
     </fileSet>
+    <fileSet filtered="true">
+        <directory>js</directory>
+        <includes>
+            <include>pom.xml</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true">
+        <directory>js/src/main/java</directory>
+        <includes>
+            <include>**/*.java</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true">
+        <directory>js/src/test/java</directory>
+        <includes>
+            <include>**/*Test.java</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true">
+        <directory>__webpath__</directory>
+        <includes>
+            <include>nbactions*.xml</include>
+            <include>pom.xml</include>
+        </includes>
+    </fileSet>
     <fileSet filtered="true" packaged="false">
-      <directory>assembly</directory>
+      <directory>__webpath__/src/main/assembly</directory>
       <includes>
-        <include>html.java.net-assembly.xml</include>
+        <include>bck2brwsr.xml</include>
       </includes>
     </fileSet>
-  </fileSets>
+    <fileSet filtered="true" packaged="true">
+      <directory>__webpath__/src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true">
+        <directory>__netbeanspath__</directory>
+        <includes>
+            <include>nbactions*.xml</include>
+            <include>pom.xml</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true">
+      <directory>__netbeanspath__/src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="false" packaged="false">
+        <directory>__netbeanspath__/src/main/icons</directory>
+        <includes>
+            <include>**/*.png</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true">
+        <directory>__androidpath__</directory>
+        <includes>
+            <include>nbactions*.xml</include>
+            <include>pom.xml</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true">
+        <directory>__androidpath__/src/main</directory>
+        <includes>
+            <include>AndroidManifest.xml</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true">
+      <directory>__androidpath__/src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="false" packaged="false">
+        <directory>__androidpath__/src/main/icons</directory>
+        <includes>
+            <include>**/*.png</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true">
+        <directory>__iospath__</directory>
+        <includes>
+            <include>nbactions*.xml</include>
+            <include>pom.xml</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="false" packaged="false">
+        <directory>__iospath__/src/main/icons</directory>
+        <includes>
+            <include>**/*.png</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true">
+      <directory>__iospath__/src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+  </fileSets>    
 </archetype-descriptor>

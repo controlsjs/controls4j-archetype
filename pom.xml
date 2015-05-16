@@ -3,7 +3,7 @@
     Controls.js
     http://controlsjs.com/
 
-    Copyright (c) 2014 Position s.r.o.  All rights reserved.
+    Copyright (c) 2014-2015 Position s.r.o.  All rights reserved.
 
     The contents of this file are licensed under the terms of GNU General Public License v3.
     http://www.gnu.org/licenses/gpl-3.0.html
@@ -14,7 +14,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.controlsjs.controls4j</groupId>
   <artifactId>archetypes-pom</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <packaging>pom</packaging>
   <name>Controls.js 4 Java Archetypes</name>
     <description>
@@ -25,6 +25,7 @@
 
   <modules>
     <module>app-archetype</module>
+    <module>app-archetype-test</module>
   </modules>
   
   <licenses>
@@ -64,11 +65,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <controlsjs.version>5.0.0</controlsjs.version>
-    <controls4j.version>1.0.1</controls4j.version>
-    <net.java.html.version>1.0</net.java.html.version>
+    <controls4j.version>1.1</controls4j.version>
+    <net.java.html.version>1.1</net.java.html.version>
     <nb.html.version>1.0</nb.html.version>
-    <brwsr.html.version>1.0.1</brwsr.html.version>
-    <bck2brwsr.version>0.11</bck2brwsr.version>
+    <presenters.version>0.7</presenters.version>
+    <bck2brwsr.version>0.14</bck2brwsr.version>
     <jersey.version>2.12</jersey.version>
   </properties>
 

@@ -1,0 +1,118 @@
+{
+/*
+  ControlsForm: 'AppModel'
+*/
+#if ($example == "1")
+#if ($skin_wineight != "0")        
+  Label1: {
+    Type: 'weLabel',
+    L: 20, T: 20,
+    Data: {
+      Text: 'Name:'
+    }
+  },
+    
+  Edit1: { 
+    Type: 'weEdit',
+    L:80, T: 20, W: 150, 
+    DataBind: ng_Bindings({
+      Value: 'FirstName'
+    })
+  },
+    
+  Button1: 
+  {                            
+    Type: 'weButton',
+    L: 80, T: 60,      
+    Data: {
+      Text: 'Say Hello'
+    },      
+    DataBind: ng_Bindings({
+      OnClick: 'sayHello'
+    })
+  },
+
+  Message1: {
+    Type: 'weLabel',
+    L: 80, T: 100,
+    DataBind: ng_Bindings({
+      Text: 'Message'
+    })
+  }     
+#else
+#if ($skin_winxp != "0")        
+  Label1: {
+    Type: 'stdLabel',
+    L: 20, T: 20,
+    Data: {
+      Text: 'Name:'
+    }
+  },
+    
+  Edit1: { 
+    Type: 'stdEdit',
+    L:60, T: 15, W: 150, 
+    DataBind: ng_Bindings({
+      Value: 'FirstName'
+    })
+  },
+    
+  Button1: 
+  {                            
+    Type: 'stdButton',
+    L: 60, T: 45,      
+    Data: {
+      Text: 'Say Hello'
+    },      
+    DataBind: ng_Bindings({
+      OnClick: 'sayHello'
+    })
+  },
+
+  Message1: {
+    Type: 'stdLabel',
+    L: 62, T: 76,
+    DataBind: ng_Bindings({
+      Text: 'Message'
+    })
+  }
+#else
+  Label1: {
+    Type: 'wfrLabel',
+    L: 20, T: 20,
+    Data: {
+      Text: 'Name:'
+    }
+  },
+    
+  Edit1: { 
+    Type: 'wfrEdit',
+    L:60, T: 15, W: 150, 
+    DataBind: ng_Bindings({
+      Value: 'FirstName'
+    })
+  },
+    
+  Button1: 
+  {                            
+    Type: 'wfrButton',
+    L: 60, T: 48,      
+    Data: {
+      Text: 'Say Hello'
+    },      
+    DataBind: ng_Bindings({
+      OnClick: 'sayHello'
+    })
+  },
+
+  Message1: {
+    Type: 'wfrLabel',
+    L: 60, T: 84,
+    DataBind: ng_Bindings({
+      Text: 'Message'
+    })
+  }     
+#end
+#end
+#end
+}

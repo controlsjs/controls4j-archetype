@@ -3,7 +3,7 @@
     Controls.js
     http://controlsjs.com/
 
-    Copyright (c) 2014 Position s.r.o.  All rights reserved.
+    Copyright (c) 2014-2015 Position s.r.o.  All rights reserved.
 
     The contents of this file are licensed under the terms of GNU General Public License v3.
     http://www.gnu.org/licenses/gpl-3.0.html
@@ -12,14 +12,13 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.controlsjs.controls4j</groupId>
-    <artifactId>archetypes-pom</artifactId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
+    <parent>
+        <groupId>com.controlsjs.controls4j</groupId>
+        <artifactId>archetypes-pom</artifactId>
+        <version>1.1</version>
+    </parent>
     <groupId>com.controlsjs.controls4j</groupId>
     <artifactId>app-archetype-test</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <name>Controls.js 4 Java Application Maven Archetype Test</name>
     <description>Verifies if the Controls.js 4 Java application archetype behaves properly.</description>
     <url>http://controlsjs.com</url>
@@ -32,6 +31,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.compile.on.save>none</netbeans.compile.on.save>
     </properties>
     <build>
         <plugins>
