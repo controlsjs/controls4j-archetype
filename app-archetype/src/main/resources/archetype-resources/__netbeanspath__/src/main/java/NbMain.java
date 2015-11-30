@@ -1,6 +1,6 @@
 package ${package};
 
-import org.netbeans.api.nbrwsr.OpenHTMLRegistration;
+import org.netbeans.api.htmlui.OpenHTMLRegistration;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
 import org.openide.awt.ActionReferences;
@@ -15,6 +15,7 @@ public class NbMain {
     )
     @OpenHTMLRegistration(
         url="index.html",
+        techIds={"controls4j"},
         displayName = "Open Your Page",
         iconBase = "${package.replace('.','/')}/icon.png"
     )

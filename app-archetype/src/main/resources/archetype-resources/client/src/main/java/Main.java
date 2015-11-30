@@ -11,7 +11,7 @@ public final class Main {
         BrowserBuilder.newBrowser("controls4j").          
             loadPage("pages/index.html").
             loadClass(AppCntrl.class).
-            invoke("onPageLoad").
+            invoke("onPageLoad", args).
             showAndWait();
         System.exit(0);
     }

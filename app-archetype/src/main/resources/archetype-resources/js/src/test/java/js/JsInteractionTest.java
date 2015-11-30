@@ -24,7 +24,7 @@ public class JsInteractionTest {
     }
     
     @Test public void testCallbackFromJavaScript() throws Exception {
-#if ($example == "true")
+#if ($example == "1")
         class R implements Runnable {
             int called;
 

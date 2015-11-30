@@ -14,9 +14,6 @@
 -->
 <archetype-descriptor name="Controls.js 4 Java Application">
   <requiredProperties>
-    <requiredProperty key="example">
-        <defaultValue>1</defaultValue>
-    </requiredProperty>      
     <requiredProperty key="skin_wineight">
         <defaultValue>1</defaultValue>
     </requiredProperty>      
@@ -28,16 +25,19 @@
     </requiredProperty>      
     <requiredProperty key="iospath">
         <defaultValue>target/client-ios</defaultValue>
-    </requiredProperty>  
+    </requiredProperty>
     <requiredProperty key="androidpath">
         <defaultValue>target/client-android</defaultValue>
-    </requiredProperty>  
+    </requiredProperty>
     <requiredProperty key="webpath">
         <defaultValue>target/client-web</defaultValue>
-    </requiredProperty>  
+    </requiredProperty>
     <requiredProperty key="netbeanspath">
         <defaultValue>target/client-netbeans</defaultValue>
-    </requiredProperty>  
+    </requiredProperty>
+    <requiredProperty key="example">
+        <defaultValue>1</defaultValue>
+    </requiredProperty>      
   </requiredProperties>
   <fileSets>
     <fileSet filtered="true">
@@ -120,7 +120,7 @@
     <fileSet filtered="true" packaged="false">
       <directory>__webpath__/src/main/assembly</directory>
       <includes>
-        <include>bck2brwsr.xml</include>
+        <include>*.xml</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="true">
@@ -192,5 +192,5 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
-  </fileSets>    
+  </fileSets>
 </archetype-descriptor>
