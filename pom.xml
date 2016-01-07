@@ -14,7 +14,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.controlsjs.controls4j</groupId>
   <artifactId>archetypes-pom</artifactId>
-  <version>1.2</version>
+  <version>1.2.1</version>
   <packaging>pom</packaging>
   <name>Controls.js 4 Java Archetypes</name>
     <description>
@@ -65,13 +65,14 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <controlsjs.version>5.0.0</controlsjs.version>
-    <controls4j.version>1.2</controls4j.version>
+    <controls4j.version>1.2.1</controls4j.version>
     <net.java.html.version>1.2.3</net.java.html.version>
     <presenters.version>0.9.1</presenters.version>
     <robovm.version>1.6.0</robovm.version>
     <bck2brwsr.version>0.16</bck2brwsr.version>
     <netbeans.version>RELEASE81</netbeans.version>
-    <teavm.version>0.4.0</teavm.version>
+    <teavm.version>0.4.3</teavm.version>
+    <controls4j.teavm.version>1.0</controls4j.teavm.version>
     <jersey.version>2.12</jersey.version>
   </properties>
 

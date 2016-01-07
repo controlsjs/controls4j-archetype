@@ -22,9 +22,11 @@
         <browser.bootstrap>initialize bck2brwsr --&gt;
 &lt;script type="text/javascript" src="bck2brwsr.js"&gt;&lt;/script&gt;
 &lt;script&gt;
+window.onload = function() { 
     var vm = bck2brwsr('\${artifactId}.js');
     var c = vm.loadClass('\${package}.BrowserMain');
     c.invoke('main');
+};
 &lt;/script&gt;
 &lt;!-- end of initialization </browser.bootstrap>
     </properties>
@@ -171,13 +173,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.apidesign.bck2brwsr</groupId>
-            <artifactId>ko-bck2brwsr</artifactId>
-            <version>\${bck2brwsr.version}</version>
-            <classifier>bck2brwsr</classifier>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>\${groupId}</groupId>
             <artifactId>\${artifactId}-js</artifactId>
             <version>\${project.version}</version>
@@ -191,20 +186,21 @@
             <id>teavm</id>
             <properties>
                 <teavm.version>${teavm.version}</teavm.version>
+                <controls4j.teavm.version>${controls4j.teavm.version}</controls4j.teavm.version>
                 <teavm.debug>false</teavm.debug>
                 <browser.bootstrap>initialize TeaVM --&gt;
 &lt;script type="text/javascript" src="teavm.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-    main();
+    window.onload = function() { main(); };
 &lt;/script&gt;
 &lt;!-- end of initialization </browser.bootstrap>
             </properties>
             <dependencies>
                 <!-- needs special compile time dep otherwise TeaVM ignores the JAR -->
                 <dependency>
-                    <groupId>org.netbeans.html</groupId>
-                    <artifactId>ko4j</artifactId>
-                    <version>\${net.java.html.version}</version>
+                    <groupId>com.controlsjs</groupId>
+                    <artifactId>controls4j</artifactId>
+                    <version>\${controls4j.version}</version>
                 </dependency>
             </dependencies>
             <build>
@@ -226,6 +222,11 @@
                                 <artifactId>teavm-html4j</artifactId>
                                 <version>\${teavm.version}</version>
                             </dependency>
+                            <dependency>
+                                <groupId>com.controlsjs.controls4j</groupId>
+                                <artifactId>teavmsupport</artifactId>
+                                <version>\${controls4j.teavm.version}</version>
+                            </dependency>                            
                         </dependencies>
                         <executions>
                             <execution>

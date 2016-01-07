@@ -455,15 +455,15 @@ public class VerifyArchetypeIT {
             if (line.matches(".*Generating.*emul.*")) {
                 fail("Don't generate emul: " + line);
             }
-            if (line.matches(".*Generating.*net.java.html.*")) {
-                fail("Don't generate HTML/Java libraries: " + line);
-            }
+        //    if (line.matches(".*Generating.*net.java.html.*")) {
+        //        fail("Don't generate HTML/Java libraries: " + line);
+        //    }
         }
 
         assertNoTextInSubdir("boot.fx", genRoot);
     }
 
-/*    @Test
+    @Test
     public void teaVMwebProjectCompiles() throws Exception {
         final File dir = new File("target/tests/teavmcmp/").getAbsoluteFile();
         File gen = generateFromArchetype("t-p-test", dir, "-Dwebpath=test-web");
@@ -529,14 +529,14 @@ public class VerifyArchetypeIT {
             if (line.matches(".*Generating.*emul.*")) {
                 fail("Don't generate emul: " + line);
             }
-            if (line.matches(".*Generating.*net.java.html.*")) {
-                fail("Don't generate HTML/Java libraries: " + line);
-            }
+        //    if (line.matches(".*Generating.*net.java.html.*")) {
+        //        fail("Don't generate HTML/Java libraries: " + line);
+        //    }
         }
 
         assertNoTextInSubdir("boot.fx", genRoot);
     }
-*/
+
     @Test public void bck2brwsrAndNbrwsrProjectCompiles() throws Exception {
         final File dir = new File("target/tests/BandN/").getAbsoluteFile();
         File gen = generateFromArchetype("b-n-test", dir, "-Dwebpath=for-web", "-Dnetbeanspath=for-nb");

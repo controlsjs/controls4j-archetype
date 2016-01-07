@@ -48,7 +48,7 @@
             <goal>package</goal>
         </goals>
     </action>
-<!--    <action>
+    <action>
         <actionName>CUSTOM-teavm-show</actionName>
         <displayName>Run in a Browser via TeaVM</displayName>
         <goals>
@@ -87,5 +87,5 @@
         <activatedProfiles>
             <activatedProfile>teavm</activatedProfile>
         </activatedProfiles>
-    </action> -->
+    </action>
 </actions>
